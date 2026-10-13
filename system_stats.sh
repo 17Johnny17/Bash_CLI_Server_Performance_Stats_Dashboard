@@ -20,3 +20,7 @@ echo "Total Amount of Space Available: $DISK_AVAIL"
 # Memory Stats
 echo -e "\nMEMORY USAGE"
 echo "$(free -h)"
+
+# Top 5 processes used based on memory
+echo -e "\nTOP 5 PROCESSES BY MEMORY USAGE"
+echo "$(ps axo %mem,pid,comm --sort=-%mem | head -n 6)"
